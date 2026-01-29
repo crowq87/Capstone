@@ -12,7 +12,7 @@ body {
 
 .app-wrapper {
     background-color: #fffffff8;
-    color: white;
+    color: rgb(0, 0, 0);
     min-height: 100vh;
     display: flex;
     flex-direction: column;

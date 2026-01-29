@@ -1,48 +1,43 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
+import logo from '../assets/Logo.png';
+import '../css/Navbar.css'
 
-function Navbar(){
-
-return(
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="homepage">GamePlus+</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <Link to="/home" class="nav-link">Home</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/vehicle" class="nav-link">Browse</Link>
-        </li>
-        <li class="nav-item">
-          <Link to="/about" class="nav-link">About</Link>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-<form class="sbtn container-fluid justify-content-end ">
-    <button class="btn btn-sm btn-outline-light m-2" type="button"><Link to="/signin" class="nav-link">Sign in</Link></button>
-    <button class="btn btn-sm btn-danger" type="button"><Link to="/signup" class="nav-link">Sign up</Link></button>
-    
-  </form>
-
-</nav>
-
-)
+function Navbar() {
+    return (
+        <header className="p-2 mb-2 border-bottom bg-primary"> 
+            <div className="container">
+                <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
+                     <Link to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none"> 
+                        <img src={logo} alt="AutoHub Logo" width="40" height="40" className="me-2"/> 
+                        <span className="fs-4 fw-bold text-light">AutoHub</span>
+                    </Link>
+                    <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"> 
+                        <li><Link to="/" className="nav-link px-2 link-light">Overview</Link></li> 
+                        <li><Link to="/inventory" className="nav-link px-2 link-light">Inventory</Link></li> 
+                        <li><Link to="/customers" className="nav-link px-2 link-light">Customers</Link></li> 
+                        <li><Link to="/products" className="nav-link px-2 link-light">Products</Link></li> 
+                    </ul> 
+                    
+                    <Link to="/login" className="btn btn-light text-primary fw-bold me-3">
+                        Login
+                    </Link>
+                    
+                    <div className="dropdown text-end"> 
+                        <a href="#" className="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
+                            <img src="./src/assets/react.svg" alt="mdo" width="32" height="32" className="rounded-circle"/> 
+                        </a> 
+                        <ul className="dropdown-menu text-small"> 
+                            <li><Link className="dropdown-item" to="/new-project">New project...</Link></li> 
+                            <li><Link className="dropdown-item" to="/settings">Settings</Link></li> 
+                            <li><Link className="dropdown-item" to="/profile">Profile</Link></li> 
+                            <li><hr className="dropdown-divider"/></li> 
+                            <li><Link className="dropdown-item" to="/logout">Sign out</Link></li> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </header>
+    )
 }
 
-export default Navbar
+export default Navbar;

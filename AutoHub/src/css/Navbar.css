@@ -1,0 +1,31 @@
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px !important;
+  }
+
+  .navbar .container {
+    padding: 0;
+  }
+
+  /* Hide menu items on mobile */
+  .navbar .nav {
+    display: none;
+  }
+
+  /* Make logo smaller on mobile */
+  .navbar img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar .fs-4 {
+    font-size: 1.1rem !important;
+  }
+
+  /* Keep login and profile on mobile */
+  .navbar .btn,
+  .navbar .dropdown {
+    font-size: 0.9rem;
+  }
+}
