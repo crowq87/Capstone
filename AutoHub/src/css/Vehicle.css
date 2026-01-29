@@ -1,12 +1,32 @@
+
 .vehicle-card {
   width: 100%;
-  height: 400px;
+  height: 450px;
   margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vehicle-card-img-wrapper {
+  position: relative;
+  height: 200px;
 }
 
 .vehicle-card-img {
   height: 200px;
   object-fit: cover;
+  width: 100%;
+}
+
+.vehicle-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 20px;
+  z-index: 10;
 }
 
 .vehicle-card-body {
@@ -18,8 +38,8 @@
   height: 50px;
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -webkit-box; 
-  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
